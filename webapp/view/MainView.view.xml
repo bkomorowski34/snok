@@ -1,0 +1,88 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:table="sap.ui.table" controllerName="myapp.controller.MainView">
+    <VBox>
+        <Toolbar>
+    <SearchField placeholder="{i18n>searchField}" liveChange="onSearch" />
+    <Button text="{i18n>addRow}" press="onAddRow" />
+    <Button text="{i18n>deleteSelected}" press="onDeleteRow" />
+    <Button text="{i18n>editAllRows}" press="onEditRow" />
+    <Button text="{i18n>copyRow}" press="onDuplicateRow" />
+    <Button text="{i18n>sum}" press="onCalculateSum" />
+</Toolbar>
+<Toolbar>
+    <Button text="{i18n>edit}" press="onEditMode" />
+    <Button text="{i18n>save}" press="onSaveEdit" />
+</Toolbar>
+        <table:Table id="butterflyTable" rows="{data>/butterflies}" visibleRowCount="10" selectionMode="MultiToggle">
+            <table:Column label="{i18n>name}" sortProperty="Name" filterProperty="Name">
+            <table:template>
+                <Input value="{data>Name}" editable="{data>editable}" />
+            </table:template>
+        </table:Column>
+        <table:Column label="{i18n>family}" sortProperty="Family" filterProperty="Family">
+            <table:template>
+                <Input value="{data>Family}" editable="{data>editable}" />
+            </table:template>
+        </table:Column>
+        <table:Column label="{i18n>location}" sortProperty="Location" filterProperty="Location">
+            <table:template>
+                <Input value="{data>Location}" editable="{data>editable}" />
+            </table:template>
+        </table:Column>
+        <table:Column label="{i18n>date}" sortProperty="Date" filterProperty="Date">
+            <table:template>
+                <Input value="{data>Date}" editable="{data>editable}" />
+            </table:template>
+        </table:Column>
+        <table:Column label="{i18n>wingspan}" sortProperty="Wingspan" filterProperty="Wingspan">
+            <table:template>
+                <Input value="{data>Wingspan}" editable="{data>editable}" />
+            </table:template>
+        </table:Column>
+        <table:Column label="{i18n>weight}" sortProperty="Weight" filterProperty="Weight">
+            <table:template>
+                <Input value="{data>Weight}" editable="{data>editable}" />
+            </table:template>
+        </table:Column>
+        <table:Column label="{i18n>price}" sortProperty="Price" filterProperty="Price">
+            <table:template>
+                <Input value="{data>Price}" editable="{data>editable}" type="Number" />
+            </table:template>
+        </table:Column>
+        <table:Column label="{i18n>abundance}" sortProperty="Abundance" filterProperty="Abundance">
+            <table:template>
+                <Input value="{data>Abundance}" editable="{data>editable}" type="Number" />
+            </table:template>
+        </table:Column>
+        <table:Column label="{i18n>color}" sortProperty="Color Rating" filterProperty="Color Rating">
+            <table:template>
+                <Input value="{data>Color Rating}" editable="{data>editable}" type="Number" />
+            </table:template>
+        </table:Column>
+         <table:Column label="{i18n>habitat}" sortProperty="Habitat" filterProperty="Habitat">
+            <table:template>
+                <Input value="{data>Habitat}" editable="{data>editable}" />
+            </table:template>
+        </table:Column>
+        <table:Column label="{i18n>lifespan}" sortProperty="Lifespan" filterProperty="Lifespan">
+            <table:template>
+                <Input value="{data>Lifespan}" editable="{data>editable}" />
+            </table:template>
+        </table:Column>
+        <table:Column label="{i18n>migration}" sortProperty="Migration Pattern" filterProperty="Migration Pattern">
+            <table:template>
+                <Input value="{data>Migration Pattern}" editable="{data>editable}" />
+            </table:template>
+        </table:Column>
+        <table:Column label="{i18n>threat}" sortProperty="Threat Level" filterProperty="Threat Level">
+            <table:template>
+                <Input value="{data>Threat Level}" editable="{data>editable}" />
+            </table:template>
+        </table:Column>
+
+        
+        </table:Table>
+        
+
+
+    </VBox>
+</mvc:View>
